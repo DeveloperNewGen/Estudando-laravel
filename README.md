@@ -1,4 +1,4 @@
-# Projeto Laravel no Ubuntu 20.04
+# Estudando Laravel 
 
 Este README fornece as instruções para configurar um ambiente de desenvolvimento Laravel em uma máquina Ubuntu 20.04. O projeto utiliza PHP 8.2, Composer, e SQLite3 como banco de dados para simplificar a inicialização.
 
