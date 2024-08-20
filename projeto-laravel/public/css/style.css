@@ -1,0 +1,217 @@
+/* Global Styles */
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    transition: background-color 0.3s ease;
+}
+
+/* Text Colors */
+p, span {
+    color: #333;
+}
+
+h1 {
+    color: #ffff;
+    font-size: 32px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    animation: fadeInDown 0.6s ease-out;
+    margin-top: 0;
+}
+
+h2 {
+    color: #7ab829;
+    font-size: 24px;
+    margin-bottom: 20px;
+    animation: fadeInUp 0.6s ease-out;
+}
+
+/* Inputs and Buttons */
+input, select, textarea, button {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 12px 0;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    color: #333;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+input:focus, select:focus, textarea:focus, button:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transform: scale(1.02);
+}
+
+button {
+    background-color: #268fd0;
+    cursor: pointer;
+    color: #fff;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #7ab829;
+    transform: scale(1.05);
+}
+
+/* Placeholder Colors */
+::placeholder {
+    color: #aaa;
+}
+
+/* Header */
+.topo {
+    width: 100%;
+    background-color: #ffffff;
+    padding: 20px 0;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    animation: slideDown 0.5s ease-out;
+}
+
+.logo {
+    width: 60px;
+    float: left;
+    margin-left: 40px;
+}
+
+.menu {
+    float: right;
+    margin-right: 40px;
+}
+
+.menu li {
+    display: inline;
+    margin: 0 15px;
+    animation: fadeIn 0.8s ease-out;
+}
+
+.menu a {
+    text-decoration: none;
+    padding: 14px 20px;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.menu a:hover {
+    color: #268fd0;
+    text-shadow: 0px 0px 5px rgba(38, 143, 208, 0.5);
+}
+
+/* Content */
+.conteudo-pagina {
+    width: 100%;
+    padding-top: 0;
+    text-align: center;
+    animation: fadeIn 1s ease-out;
+}
+
+.titulo-pagina {
+    padding: 80px 0 40px;
+    background-color: #268fd0;
+    color: #fff;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    margin-top: 80px;
+}
+
+.informacao-pagina {
+    margin-top: 30px;
+    color: #333;
+    font-size: 18px;
+    line-height: 1.6;
+    animation: fadeIn 1.2s ease-out;
+}
+
+/* Form Styles */
+.contato-principal form {
+    margin: 20px auto;
+    max-width: 600px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    animation: fadeInUp 1.2s ease-out;
+}
+
+/* Footer */
+.rodape {
+    width: 100%;
+    background-color: #f8f8f8;
+    padding: 10px 0;
+    text-align: center;
+    position: relative;
+    box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    animation: fadeInUp 0.6s ease-out;
+}
+
+.redes-sociais, .area-contato {
+    width: auto;
+    display: inline-block;
+    padding: 0 10px;
+    margin: 0;
+    line-height: 1.5;
+}
+
+.redes-sociais img {
+    margin: 0 5px;
+    width: 20px;
+    height: 20px;
+    transition: transform 0.3s ease;
+}
+
+.redes-sociais img:hover {
+    transform: scale(1.2);
+}
+
+.redes-sociais, .area-contato h2 {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.area-contato span img {
+    display: inline-block;
+    vertical-align: middle;
+} img {
+    width: 20px;
+    height: 20px;
+    margin-left: 5px;
+    transition: transform 0.3s ease;
+} img:hover {
+    transform: scale(1.2);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideDown {
+    from { transform: translateY(-100%); }
+    to { transform: translateY(0); }
+}

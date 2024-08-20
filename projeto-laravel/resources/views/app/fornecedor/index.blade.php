@@ -8,14 +8,34 @@
 @endphp
 
 @isset($fornecedores)
-    Fornecedor: {{$fornecedores[0]['nome']}}
-    <br>
-    Status: {{$fornecedores[0]['status']}}
-    <br>
-    CNPJ: {{$fornecedores[0]['CNPJ']}}
-    @empty($fornecedores[0]['CNPJ'])
-        -vazio
-    @endempty
+
+    @php $i =0 @endphp
+    @while(isset($fornecedores[$i]))
+        Fornecedor: {{$fornecedores[$i]['nome']}}
+        <br>
+        Status: {{$fornecedores[$i]['status']}}
+        <br>
+        CNPJ: {{$fornecedores[$i]['CNPJ'] ?? 'valor não inserido'}}
+        <br>
+        Telefone: ({{$fornecedores[$i]['ddd'] ?? 'valor não inserido'}}) {{$fornecedores[$i]['telefone'] ?? 'valor não inserido'}}
+
+        @switch($fornecedores[$i]['ddd'])
+            @case('11')
+                São Paulo - SP
+                @break
+            @case('32')
+                Juiz de Fora - MG
+                @break
+            @case('85')
+                Fortaleza - CE
+                @break
+            @default
+                Estado não identificado
+    @endswitch
+     <hr>
+     @php $i++ @endphp
+    @endwhile
+
 @endisset
 
 
